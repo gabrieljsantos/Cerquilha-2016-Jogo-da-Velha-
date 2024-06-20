@@ -16,16 +16,16 @@ char x_ou_o ; //Para alternar entre x ou o, no momento que for player 1 ou 2,de 
 
 string comandos ;
 
-bool check_jogada ; //Chekar se alguma jogada inteligente foi ativada.
+bool check_jogada ; //Checar se alguma jogada inteligente foi ativada.
 
 int v_to_all_jogo2 ; //Variavel que para funcao que darar
 
-int v_to_all_jogo ; //Variavel que para funcao que darar valo '-' a todo array no inicio.;PS: v == valor.
+int v_to_all_jogo ; //Variavel que para funcao que darar valo '-' a todo array no inicio.; PS: v == valor.
 int vencedor ; //Para identificar quem ganhou.
 int controle ; //Mapemento do controle
 int auter = -1 ; //x_ou_o receber o valor de p1_x ou p2_o ,no momento que for player 1 ou 2.
 int numjog ; //Numero de jogadas,valor inicial 0.
-int decisao ; //decisao do propio jogo,de acordo com os padroes de jogada.
+int decisao ; //decisao do proprio jogo ,de acordo com os padroes de jogada.
 int decisao_aleato ; //decisao aleatoria caso nenhum padrao de jogada seja adquererido.
 int dec_ale_start ; //decisao aleatoria para inicio.
 int partid_wins_p1 = 0 ; //Patidas ganhadas do player 1 (O jogador ).
@@ -72,23 +72,24 @@ int logva (void) {
 }
 
 int tutorial (void) {
-	cout << "cada posicao e reprenzentado por um numero,de forma que 2 , 5 e 7 reprenzentara:" << endl
+	system("cls") ;
+	cout << "Cada posição no tabuleiro é representada por um número. Por exemplo, os números 2, 5 e 7 representam:" << endl
 	     << "- 2 -" << endl
 		 << "- 5 -" << endl
 		 << "7 - -" << endl
-		 << "sendo assim :" << endl
-		 << "1 2 3 \n4 5 6 \n7 8 9 " << endl
-		 << "jogue Apenas um numero por vez." << endl
-		 << "quando se pedir numeros ,nao digite letras ou palavras." ;
+         << "O tabuleiro completo é disposto da seguinte forma:" << endl
+         << "1 2 3\n4 5 6\n7 8 9" << endl
+         << "Digite apenas um número por vez para fazer sua jogada." << endl
+         << "Quando solicitado um número, não digite letras ou palavras." << endl;
 		 system ("pause") ;
 	}
 
-int cleararray (void) { //funcao que darar valo '-' a todo array no inicio.
+int cleararray (void) { //funcao que dará o valo '-' a todo array no inicio.
 	for (v_to_all_jogo = 0 ;v_to_all_jogo <= 8 ; v_to_all_jogo ++ ) { //funcao que darar valo '-' a todo array no inicio.
 		jogo[v_to_all_jogo] = '-' ;
 	}
 }
-int imprimir (void) { //funcao que limparar e imprimirar todo array em uma matriz 3x3 com todas auteracoes de acordo com as jogada.
+int imprimir (void) { //funcao que limpará e imprimirá todo array em uma matriz 3x3 com todas auteracoes de acordo com as jogada.
 
 	system ("cls") ; //Limpa tela.
 
@@ -203,7 +204,7 @@ int main() {
 
 				check_jogada = 1 ;
 
-				switch (dec_ale_start) { //Jogada iniciais inteligente e aletoria para opropio jogo.
+				switch (dec_ale_start) { //Jogada iniciais inteligentes e aletorias para o proprio jogo.
 
 		          	case 1 :
 		          		if (jogo[4] == '-') {
@@ -241,7 +242,9 @@ int main() {
 
 			}
 //########################################################################################################
-// retirei codigo da qui.
+
+//########################################################################################################
+
 			//Grupo de combinacoes para evitar que o jogador ganhe na jogada de posicao 1.
 			if ((jogo[0] == '-') && (((jogo[1] == p1_x) && (jogo[2] == p1_x)) or //!jj !-- !--
 									 ((jogo[4] == p1_x) && (jogo[8] == p1_x)) or //--- -j- j--
@@ -375,7 +378,7 @@ int main() {
 
 
 
-		    switch (auter) { //De acordo com auter definice quem vai jogar.
+		    switch (auter) { //De acordo com auter definir quem vai jogar.
 
 	          	case 1 ://caso auter igual a 1 o player 1 joga
 
@@ -529,20 +532,21 @@ int main() {
 					<< "tutorial - tutorial." << endl
 					<< "inicio - Recomeca jogo." << endl
 					<< "easy - Ativar modo facil." << endl
-					<< "medium - Ativar modo m�dio." << endl
-					<< "hard - Ativar modo dif�cil." << endl
+					<< "medium - Ativar modo medio." << endl
+					<< "hard - Ativar modo dificil." << endl
 					<< "credits - Creditos do jogo." << endl
 					<< "cheats - Menu de cheats." << endl
 					<< "valor - valor de variaves" << endl
 					<< "sair - Sair do jogo." << endl
 					<< "v - Voltar para o jogo." << endl
 					<< endl
-					<< " *** Nem tudo funciona aqui ***" << endl
-					<< "talzez em atualizacoes futuras !!" << endl ;
+					<< "*** Algumas funcionalidades ainda nao estao disponíveis ***" << endl
+     				<< "Talvez em futuras atualizacoes!" << endl;
+
 					cin >> comandos ;
 					if (comandos == "credits"){
 						system("cls") ;
-						cout << "Gabriel de Jesus Santos" << endl ;
+						cout << "Developed by Gabriel de Jesus Santos in 2016" << endl ;
 						system ("pause") ;
 						goto menu ;
 					}
@@ -739,7 +743,7 @@ int main() {
 		 		break ;
 		 	case 2 :
 		 		auter = rand() % 2 + 1 ; //Caso empate proximo jogador e escolhido aleatoriamente.
-		 		if (auter == 2){ //O valor 2 nao e permitido,entao troca esse valor por -1.
+		 		if (auter == 2){ //O valor 2 nao é permitido, entao trocar esse valor por -1.
 		 			auter = auter-1 ;
 				}
 		 		cout << "Empate!" << endl ;

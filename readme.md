@@ -1,6 +1,9 @@
 # Jogo da Velha
 
-Este projeto foi desenvolvido por Gabriel de Jesus Santos em 2016. É uma implementação simples de um jogo da velha em C++ que pode ser jogado entre um jogador e a IA do jogo. 
+Este projeto foi desenvolvido por mim em 2016 como uma implementação simples de um jogo da velha em C++. Ele permite que um jogador jogue contra a inteligência artificial do jogo. Embora funcional, o código apresenta alguns erros, redundâncias e práticas de programação não ideais. Na época, foi o programa mais complexo que consegui criar, e ainda hoje, **sinto um misto de orgulho nostálgico ao revisitar essa conquista**.
+Se você decidir corrigir o código, sugiro usar como inspiração e começar a reescrevê-lo do zero.
+
+---
 
 ## Descrição
 
@@ -49,7 +52,7 @@ O jogo da velha é um jogo clássico onde dois jogadores, "X" e "O", se alternam
 
 ## Nota
 
-Este código foi desenvolvido em 2016 e pode não seguir as melhores práticas de programação modernas. Está disponibilizado aqui para fins educativos e nostálgicos.
+Este código foi desenvolvido em 2016 quando o altor tinha um nivek muito baixo de programação, e pode não seguir as melhores práticas de programação. Está disponibilizado aqui para fins educativos e nostálgicos.
 
 ## Autor
 
@@ -57,4 +60,41 @@ Gabriel de Jesus Santos
 
 ---
 
-Se você encontrar algum problema ou tiver sugestões de melhorias, sinta-se à vontade para contribuir ou entrar em contato.
+Se você encontrar algum problema ou tiver sugestões de melhorias, sinta-se à vontade para contribuir ou entrar em contato. começe com:
+
+### Pontos Negativos e Melhorias Necessárias
+
+O código fornecido possui vários pontos negativos que precisam ser abordados para melhorar sua funcionalidade, legibilidade, e manutenção. Abaixo estão listados os principais problemas e sugestões de melhorias:
+
+1. **Comentários Inconsistentes e Ortografia Incorreta**:
+   - Comentários como "funcao que darar valo '-' a todo array" têm erros de ortografia e gramática.
+   - **Melhoria**: Revise os comentários para corrigir os erros e torná-los mais claros.
+
+2. **Nomes de Variáveis e Funções Pouco Descritivos**:
+   - Variáveis como `v_to_all_jogo`, `controle`, `auter`, entre outras, não são descritivas.
+   - **Melhoria**: Use nomes de variáveis e funções mais significativos e consistentes com as convenções de nomenclatura.
+
+3. **Código Duplicado e Redundante**:
+   - Muitas partes do código são duplicadas, especialmente na lógica de decisão e controle de jogadas.
+   - **Melhoria**: Refatore o código para eliminar duplicações e usar funções auxiliares quando necessário.
+
+4. **Uso Excessivo de Variáveis Globais**:
+   - O código depende muito de variáveis globais, o que dificulta a manutenção e o entendimento do fluxo do programa.
+   - **Melhoria**: Minimize o uso de variáveis globais e prefira passar parâmetros para funções.
+
+5. **Falta de Verificação de Entrada do Usuário**:
+   - Não há verificação adequada para garantir que a entrada do usuário seja válida.
+   - **Melhoria**: Adicione verificações de entrada para evitar entradas inválidas e prevenir possíveis bugs.
+
+6. **Formatação do Código**:
+   - O código está mal formatado, com espaçamentos inconsistentes e linhas de código muito longas.
+   - **Melhoria**: Aplique uma formatação consistente em todo o código, usando um padrão como o estilo K&R ou Allman.
+
+7. **Lógica Complexa e Não Estruturada**:
+   - A lógica para determinar as jogadas é complexa e difícil de seguir.
+   - **Melhoria**: Simplifique a lógica usando estruturas de dados apropriadas e algoritmos mais claros.
+
+8. **Falta de Modularização**:
+   - O código principal está muito carregado e faz muitas coisas ao mesmo tempo.
+   - **Melhoria**: Separe a lógica do jogo em diferentes módulos e funções para melhorar a organização.
+

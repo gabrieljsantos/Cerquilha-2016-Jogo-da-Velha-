@@ -9,7 +9,6 @@
 #include <time.h>
 using namespace std;
 
-
 char jogo [9]  ; //Array para reprezentar o jogo.
 char p1_x = 'x' ; //Valor do player 1.
 char p2_o = 'o' ; //Valor do player 2.
@@ -31,7 +30,7 @@ int decisao_aleato ; //decisao aleatoria caso nenhum padrao de jogada seja adque
 int dec_ale_start ; //decisao aleatoria para inicio.
 int partid_wins_p1 = 0 ; //Patidas ganhadas do player 1 (O jogador ).
 int partid_wins_p2 = 0 ; //Patidas ganhadas do player 2 (O propio Jogo).
-int showvalor = 0 ; //registra opcão de ver valor das variaveis (menu)
+int showvalor = 0 ; //registra opcï¿½o de ver valor das variaveis (menu)
 
 int posicao_ja_jogada[9] ;
 
@@ -93,7 +92,7 @@ int imprimir (void) { //funcao que limparar e imprimirar todo array em uma matri
 
 	system ("cls") ; //Limpa tela.
 
-	for (v_to_all_jogo = 0 ;v_to_all_jogo <= 8 ; v_to_all_jogo ++ ) { //funcao que imprimirar todo array em uma matriz 3x3.
+	for (v_to_all_jogo = 0 ;v_to_all_jogo <= 8 ; v_to_all_jogo ++ ) { //funcao que imprimirar todo array em uma matriz 3x3 + Score.
 
 
 		switch (v_to_all_jogo) {
@@ -131,11 +130,11 @@ int imprimir (void) { //funcao que limparar e imprimirar todo array em uma matri
                             cout << " " ;
                         }
 				}
-				cout << "|" ;
+				cout << "|     +" ;
 				//v_to_all_jogo = v_to_all_jogo - 10 ;
 
 				cout << endl
-			    	 << "+    ---------" << endl
+			    	 << "+    ---------                                                      +" << endl
 					 << "+    " ;
 				break ;
 			case 7 :
@@ -148,7 +147,7 @@ int imprimir (void) { //funcao que limparar e imprimirar todo array em uma matri
 		cout << jogo[v_to_all_jogo] << "" ;
 
 	}
-	cout << endl ;
+	cout << "                                                      +" << endl ;
 	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl ;
 	cout << "Digite a posicao :" ;
 }
@@ -530,8 +529,8 @@ int main() {
 					<< "tutorial - tutorial." << endl
 					<< "inicio - Recomeca jogo." << endl
 					<< "easy - Ativar modo facil." << endl
-					<< "medium - Ativar modo médio." << endl
-					<< "hard - Ativar modo difícil." << endl
+					<< "medium - Ativar modo mï¿½dio." << endl
+					<< "hard - Ativar modo difï¿½cil." << endl
 					<< "credits - Creditos do jogo." << endl
 					<< "cheats - Menu de cheats." << endl
 					<< "valor - valor de variaves" << endl
